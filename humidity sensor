@@ -1,0 +1,51 @@
+int DHTPIN = 3;
+
+
+
+#define DHTTYPE DHT22
+
+
+
+int DHTTYPE;
+
+
+
+String temp;
+
+
+
+
+
+void setup() {
+
+    
+
+   
+
+}
+
+
+
+void loop() {
+
+    delay (1000);
+
+    // Wait for 1 second.
+
+
+
+  temp = digitalRead(DHTPIN);
+
+  Particle.publish("temp", String(temp), PRIVATE);
+
+  delay(3000);               // Wait for 3 seconds.
+
+
+
+      
+
+
+
+
+
+}
